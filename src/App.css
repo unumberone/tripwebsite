@@ -52,12 +52,13 @@ li{
 }
 
 .btn{
-    padding: 4rem 1.5rem;
+    padding: 1rem 1.5rem;
     background-color: var(--PrimaryColor);
     border: none;
     outline: none;
     border-radius: 3rem;
     cursor: pointer;
+ 
 }
 
 .btn a{
@@ -75,7 +76,7 @@ li{
     margin: 0 auto 2rem;
 }
 
-.secIntro.secTitle{
+.secIntro .secTitle{
     color: var(--blackColor);
     line-height: 1.5rem;
     padding-bottom: .5rem;
@@ -94,4 +95,8 @@ li{
 
 input{
     font-size: 100%;
+}
+
+.flex{
+    background: grey;
 }

@@ -1,1 +1,40 @@
-/*# sourceMappingURL=home.css.map */
+.home {
+    background-image: url('../../Asset/pexels-instawally-165754.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--whiteColor); 
+}
+
+.secContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.homeText {
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.subTitlte {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--whiteColor); 
+    background-color: var(--PrimaryColor); 
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}

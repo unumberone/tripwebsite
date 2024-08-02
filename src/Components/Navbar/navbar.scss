@@ -65,9 +65,8 @@
       &.active {
         left: 0;
       }
-  
       .navLists {
-        flex-direction: column;
+        display: flex;
         justify-content: center;
         width: 100%;
         margin: auto;
@@ -137,4 +136,6 @@
       left: 0;
     }
   }
-  
+  .flex{
+    color: red;
+  }

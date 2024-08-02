@@ -10,107 +10,91 @@
   --inputColor: hsl(330, 12%, 97%);
 }
 
-.navBarSection .header {
-  position: fixed;
+
+.navBarSection {
+  width: 100vw;
+  height: 100px; 
+}
+
+
+.header {
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background: transparent;
+  align-items: center;
+  background-color: var(--inputColor);
   width: 100%;
-  padding: 1rem;
-  z-index: 1000;
+  height: 100%;
+  padding: 0 20px; 
 }
-.navBarSection .header .logoDiv .logo {
-  color: var(--whiteColor);
-  font-weight: 500;
-  cursor: pointer;
+
+.logoDiv {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex-grow: 1;
 }
-.navBarSection .header .logoDiv .logo .icon {
-  color: var(--PrimaryColor);
-  font-size: 25px;
-}
-.navBarSection .header .toggleNavbar {
-  cursor: pointer;
-  font-size: 24px;
-}
-.navBarSection .header .closeNavbar {
-  cursor: pointer;
-  font-size: 24px;
-}
-.navBarSection .navBar {
-  background: var(--greyBg);
-  position: absolute;
-  height: -moz-max-content;
-  height: max-content;
-  padding: 1rem;
-  width: 100%;
-  top: 0;
-  left: -100%;
-  box-shadow: 0 2px 4px rgba(209, 209, 209, 0.9);
-  transition: 0.5s ease;
-  z-index: 1000;
+
+.headerBtns {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
-.navBarSection .navBar.active {
-  left: 0;
+
+
+.icon {
+  cursor: pointer;
+  font-size: 24px;  
+  background-color: var(--whiteColorDream);
 }
-.navBarSection .navBar .navLists {
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  margin: auto;
-  border: none;
-  border-radius: var(--whiteColorDream);
-}
-.navBarSection .navBar .navLists .navItem {
-  padding: 1rem 0;
-}
-.navBarSection .navBar .navLists .navItem .navLink {
-  color: var(--textColor);
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-.navBarSection .navBar .navLists .navItem .navLink:hover {
-  color: var(--PrimaryColor);
-}
-.navBarSection .navBar .navLists .headerBtns {
-  flex-direction: column;
-}
-.navBarSection .navBar .navLists .headerBtns .btn {
-  margin-top: 1rem;
-}
-.navBarSection .navBar .navLists .headerBtns .btn a {
-  font-weight: 600;
-}
-.navBarSection .navBar .navLists .headerBtns .btn a:hover {
-  color: var(--whiteColor);
-}
-.navBarSection .navBar .navLists .headerBtns .loginBtn {
-  background: none;
-  border: 1px solid var(--PrimaryColor);
-}
-.navBarSection .navBar .navLists .headerBtns .loginBtn a {
-  color: var(--PrimaryColor);
-}
-.navBarSection .navBar .navLists .headerBtns .loginBtn:hover {
-  background-color: var(--HoverColor);
-}
-.navBarSection .navBar .navLists .headerBtns .loginBtn:hover a {
-  color: var(--whiteColor);
-}
-.navBarSection .navBar .closeNavbar {
+
+
+.navBar {
+  display: none; 
   position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  color: var(--PrimaryColor);
-}
-.navBarSection .navBar .closeNavbar:hover .icon {
-  color: var(--HoverColor);
-}
-.navBarSection .toggleNavbar:hover + .navBar {
+  top: 80px; 
   left: 0;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease; 
+  transform: translateY(-100%); 
+}
+
+
+.navBar.activeNavbar {
+  display: block;
+  transform: translateY(0); 
+}
+
+
+.navLists {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Xếp các mục theo cột */
+}
+
+
+.navItem {
+  padding: 10px 20px; 
+  border-bottom: 1px solid #ffffff; 
+}
+
+.navItem:last-child {
+  border-bottom: none;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--textColor);
+  font-size: 14px;
+  display: block;
+  text-align: center;
+}
+
+
+.navLink:hover {
+  color: var(--PrimaryColor);
 }

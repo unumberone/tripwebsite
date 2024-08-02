@@ -11,13 +11,34 @@
 }
 
 .home {
-  height: 1000px;
+  height: 650px;
   background-position: center;
-  background-size: cover;
+  background-size: 100vw;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center; 
   margin: auto;
-  z-index: 10000;
+  z-index: 1000;
+  background-image: url(../../Asset/nature12.png);
+
+}
+
+.title{
+  color: rgb(166, 73, 19);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  justify-content: center;
+}
+.subTitle{
+  color: white
+}
+.mainbtn{
+  background-color: var(--PrimaryColor);
+  border: 1px solid #cf2727;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 100px;
 }

@@ -58,6 +58,7 @@ li{
     outline: none;
     border-radius: 3rem;
     cursor: pointer;
+    background-position: center;
  
 }
 
@@ -97,6 +98,3 @@ input{
     font-size: 100%;
 }
 
-.flex{
-    background: grey;
-}

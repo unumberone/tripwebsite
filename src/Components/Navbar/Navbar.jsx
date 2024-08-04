@@ -4,10 +4,9 @@ import { MdTravelExplore } from "react-icons/md";
 import { TbGridDots } from "react-icons/tb";
 
 const Navbar = () => {
-  // State to manage the visibility of the navbar
   const [isNavVisible, setIsNavVisible] = useState(false);
 
-  // Toggle navbar visibility
+// Chuyển đổi khả năng hiển thị thanh toggle
   const toggleNav = () => {
     setIsNavVisible(prevState => !prevState);
   };
@@ -17,22 +16,25 @@ const Navbar = () => {
       <div className="header">
         <div className="logoDiv">
           <a href="#" className="logo">
-            <h1 className="flex">TravelMate<MdTravelExplore className="icon" /></h1>
+            <h1 className="flex">
+              TravelMate <MdTravelExplore className="icon" />
+            </h1>
           </a>
-          <div className="headerBtns">
-            <button className="btn loginBtn">
-              <a href="#" className="">Login</a>
-            </button>
-            <button className="btn loginBtn">
-              <a href="#" className="">Sign Up</a>
-            </button>
-            <div onClick={toggleNav} className="toggleNavbar">
-              <TbGridDots className="icon" />
-            </div>
+        </div>
+        <div className="headerBtns">
+          <button className="btn loginBtn">
+            <a href="#">Login</a>
+          </button>
+          <button className="btn loginBtn">
+            <a href="#">Sign Up</a>
+          </button>
+          <div onClick={toggleNav} className="toggleNavbar">
+            <TbGridDots className="icon" />
           </div>
         </div>
       </div>
-      <div className={isNavVisible ? 'navBar activeNavbar' : 'navBar'}>
+      <div className={isNavVisible ? 'navBar active' : 'navBar'}>
+        <div onClick={toggleNav} className="closeNavbar">✖</div>
         <ul className="navLists">
           <li className="navItem">
             <a href="#" className="navLink">Home</a>

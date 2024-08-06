@@ -63,5 +63,94 @@
 .singleDestination {
   overflow: hidden;
   border-radius: 1rem;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+
+.destImage {
+  height: 200px;
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+}
+.destImage img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.destImage .overlayInfo {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 1.5rem;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.destImage .h3 {
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+.destImage p {
+  color: var(--whiteColor);
+  opacity: 0.7;
+  font-size: 13px;
+}
+.destImage .icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 0.5rem;
+  background-color: var(--PrimaryColor);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+.destImage .icon:hover {
+  background: var(--blackColor);
+  border: 1px solid var(--PrimaryColor);
+  color: var(--PrimaryColor);
+}
+
+.destFooter {
+  padding: 1rem;
+}
+.destFooter .number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blackColor);
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.destFooter .number::after {
+  content: "";
+  position: absolute;
+  background: var(--PrimaryColor);
+  top: 45%;
+  right: -150%;
+  height: 5px;
+  width: 45px;
+  border-radius: 1rem;
+}
+.destFooter .destText {
+  justify-content: space-between;
+}
+.destFooter h6 {
+  color: var(--blackColor);
+  font-size: 15px;
+}
+.destFooter .flex {
+  font-size: 16px;
+  font-weight: 600;
+  align-items: flex-start;
+  transform: translateY(5px);
+}
+.destFooter .flex .icon {
+  color: var(--PrimaryColor);
 }/*# sourceMappingURL=popular.css.map */

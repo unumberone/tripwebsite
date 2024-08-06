@@ -20,6 +20,12 @@
     width: 100%;
     padding: 1rem;
     z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &.activeHeader {
+      background-color:rgb(44, 48, 48);
+      box-shadow: 2px 4px var(--textColor);
+    }
 
     .logoDiv {
       .logo {
@@ -31,7 +37,7 @@
         justify-content: center;
 
         .icon {
-          color: var(--PrimaryColor);
+          color: var(--whiteColorDream);
           font-size: 25px;
         }
       }
@@ -45,34 +51,38 @@
     .toggleNavbar {
       cursor: pointer;
       font-size: 24px;
-      margin-left: 1rem; /* Thêm khoảng cách giữa toggle và các nút login */
+      margin-left: 1rem;
+      color: rgba(255, 255, 255, 1);
     }
 
     .closeNavbar {
       cursor: pointer;
       font-size: 24px;
+      border-radius: 50%;
+      background-color: var(--PrimaryColor);
     }
   }
 
   .navBar {
-      background: var(--greyBg);
-      position: fixed; /* Chỉnh sửa từ absolute thành fixed */
-      height: 40vh; 
-      width: 100%; 
-      top: -100%; 
-      left: 0; 
-      box-shadow: 0 2px 4px rgba(209, 209, 209, 0.9);
-      transition: top 0.5s ease; /* Chuyển động từ trên xuống */
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
+    background: var(--greyBg);
+    position: fixed;
+    height: 40vh;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(209, 209, 209, 0.9);
+    transition: top 0.25s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
 
     &.active {
       top: 0;
     }
+
     .navLists {
       display: flex;
-      flex-direction: column; /*dùng để hiển thị các phần tử xuống dòng*/
+      flex-direction: column;
       justify-content: center;
       width: 100%;
       margin: auto;
@@ -122,6 +132,7 @@
 
         &:hover {
           background-color: var(--HoverColor);
+
           a {
             color: var(--whiteColor);
           }
@@ -142,10 +153,10 @@
   }
 
   .toggleNavbar:hover + .navBar {
-    left: 0;
+    top: 0;
   }
-}
 
-.flex {
-  color: red;
+  .flex {
+    color: rgba(255, 255, 255, 1);
+  }
 }

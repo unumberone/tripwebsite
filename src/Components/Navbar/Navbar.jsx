@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import { MdTravelExplore } from "react-icons/md";
 import { TbGridDots } from "react-icons/tb";
@@ -6,14 +6,31 @@ import { TbGridDots } from "react-icons/tb";
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
 
-// Chuyển đổi khả năng hiển thị thanh toggle
+  // Chuyển đổi khả năng hiển thị thanh toggle
   const toggleNav = () => {
     setIsNavVisible(prevState => !prevState);
   };
 
+  const [transparent, setTransparent] = useState('header');
+
+  const addBg = () => {
+    if (window.scrollY >= 10) {
+      setTransparent('header activeHeader');
+    } else {
+      setTransparent('header');
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', addBg);
+    return () => {
+      window.removeEventListener('scroll', addBg);
+    };
+  }, []);
+
   return (
     <section className="navBarSection">
-      <div className="header">
+      <div className={transparent}>
         <div className="logoDiv">
           <a href="#" className="logo">
             <h1 className="flex">

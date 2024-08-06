@@ -26,12 +26,12 @@ const Home = () => {
                     <div className="locationDiv"></div>
                     <div className="distDiv">
                         <label htmlFor="distance">Khoảng cách</label>
-                        <input type="text" placeholder="Hà Nội,..."/>
+                        <input type="text" placeholder="Hà Nội"/>
                     </div>
 
                     <div className="priceDiv">
                         <label htmlFor="price">Khoảng giá</label>
-                        <input type="text" placeholder="800.000VND-100.000.000VND"/>
+                        <input type="text" placeholder="800.000VND-10.000.000VND"/>
                     </div>
                     <button className="mainBtn">
                         <a href="#" className="mainText">Explore Now</a>

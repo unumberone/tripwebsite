@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --PrimaryColor: hsl(26, 93%, 50%);
   --HoverColor: hsl(26, 90%, 42%);
@@ -20,6 +19,11 @@
   width: 100%;
   padding: 1rem;
   z-index: 1000;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.navBarSection .header.activeHeader {
+  background-color: rgb(44, 48, 48);
+  box-shadow: 2px 4px var(--textColor);
 }
 .navBarSection .header .logoDiv .logo {
   color: var(--whiteColor);
@@ -30,7 +34,7 @@
   justify-content: center;
 }
 .navBarSection .header .logoDiv .logo .icon {
-  color: var(--PrimaryColor);
+  color: var(--whiteColorDream);
   font-size: 25px;
 }
 .navBarSection .header .headerBtns {
@@ -40,21 +44,24 @@
 .navBarSection .header .toggleNavbar {
   cursor: pointer;
   font-size: 24px;
-  margin-left: 1rem; /* Thêm khoảng cách giữa toggle và các nút login */
+  margin-left: 1rem;
+  color: rgb(255, 255, 255);
 }
 .navBarSection .header .closeNavbar {
   cursor: pointer;
   font-size: 24px;
+  border-radius: 50%;
+  background-color: var(--PrimaryColor);
 }
 .navBarSection .navBar {
   background: var(--greyBg);
-  position: fixed; /* Chỉnh sửa từ absolute thành fixed */
+  position: fixed;
   height: 40vh;
   width: 100%;
   top: -100%;
   left: 0;
   box-shadow: 0 2px 4px rgba(209, 209, 209, 0.9);
-  transition: top 0.5s ease; /* Chuyển động từ trên xuống */
+  transition: top 0.25s ease;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -64,7 +71,7 @@
 }
 .navBarSection .navBar .navLists {
   display: flex;
-  flex-direction: column; /*dùng để hiển thị các phần tử xuống dòng*/
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   margin: auto;
@@ -120,9 +127,8 @@
   color: var(--HoverColor);
 }
 .navBarSection .toggleNavbar:hover + .navBar {
-  left: 0;
+  top: 0;
 }
-
-.flex {
-  color: red;
+.navBarSection .flex {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=navbar.css.map */

@@ -11,54 +11,85 @@
 }
 
 .home {
-  height: 650px;
-  background-position: center;
-  background-size: 100vw;
-  background-repeat: no-repeat;
+  height: 500px;
+  background: linear-gradient(rgba(33, 33, 33, 0.522), rgba(33, 33, 33, 0.522)), url("../../Asset/autumn.jpg") center/100vw no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
   z-index: 1000;
-  background-image: url(../../Asset/nature12.png);
+  background-color: rgba(10, 54, 142, 0.5);
 }
 
 .title {
-  color: rgb(166, 73, 19);
+  color: rgb(235, 233, 232);
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.5rem;
-  justify-content: center;
-  display: center;
+  text-align: center;
 }
 
 .subTitle {
-  color: white;
+  color: var(--PrimaryColor);
+  color: var(var(--whiteColorDream));
 }
 
-.mainbtn {
+.mainBtn {
   background-color: var(--PrimaryColor);
   border: 1px solid #cf2727;
-  padding: 10px 20px;
-  margin-left: 180px;
+  padding: 10px 53px;
+  margin-left: 10px;
   cursor: pointer;
   border-radius: 100px;
-  text-align: center;
-}/*# sourceMappingURL=home.css.map */
-
-.mainText{
-  color: white;
 }
 
-.homeCard{
-  width: 60%;
-  border-radius: 1rem;
-  background-color: var(--whiteColorDream);
-  position: absolute;
+.mainText {
+  background-color: var(--PrimaryColor);
+  border-radius: 50%;
+  justify-self: center;
+  text-align: center;
+  display: flex;
+  color: var(--inputColor);
+}
+
+.homeCard {
+  width: 27%;
   justify-content: center;
-  bottom: -35%;
+  gap: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 7%;
   transform: translate(-50%);
   left: 50%;
-  box-shadow: 0 2px 8px 4px rgba(178, 178,178,0.45);
-
+  box-shadow: 0 1px 1px 5px rgba(178, 178, 178, 0.45);
+  background-color: var(--whiteColor);
 }
+
+.locationDiv,
+.distDiv,
+.priceDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.label {
+  color: var(--whiteColor);
+  border-radius: 5px;
+  border: none;
+  font-size: 13px;
+}
+
+.input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--greyBg);
+}
+
+.input::-moz-placeholder {
+  color: var(--greyText);
+}
+
+.input::placeholder {
+  color: var(--greyText);
+}/*# sourceMappingURL=home.css.map */

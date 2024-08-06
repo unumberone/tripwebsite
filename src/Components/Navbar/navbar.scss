@@ -1,141 +1,162 @@
 :root {
-    --PrimaryColor: hsl(26, 93%, 50%);
-    --HoverColor: hsl(26, 90%, 42%);
-    --whiteColor: hsl(0, 0%, 100%);
-    --blackColor: hsl(0, 0%, 18%);
-    --textColor: hsl(240, 1%, 48%);
-    --whiteColorDream: hsl(0, 0%, 93%);
-    --greyBg: hsl(0, 0%, 96%);
-    --greyText: hsl(190, 100%, 70%);
-    --inputColor: hsl(330, 12%, 97%);
-  }
-  
-  .navBarSection {
-    .header {
-      position: fixed;
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDream: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: hsl(190, 100%, 70%);
+  --inputColor: hsl(330, 12%, 97%);
+}
+
+.navBarSection {
+  .header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &.activeHeader {
+      background-color:rgb(44, 48, 48);
+      box-shadow: 2px 4px var(--textColor);
+    }
+
+    .logoDiv {
+      .logo {
+        color: var(--whiteColor);
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon {
+          color: var(--whiteColorDream);
+          font-size: 25px;
+        }
+      }
+    }
+
+    .headerBtns {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      background: transparent;
-      width: 100%;
-      padding: 1rem;
-      z-index: 1000;
-  
-      .logoDiv {
-        .logo {
-          color: var(--whiteColor);
-          font-weight: 500;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          .icon {
-            color: var(--PrimaryColor);
-            font-size: 25px;
-          }
-        }
-      }
-  
-      .toggleNavbar {
-        cursor: pointer;
-        font-size: 24px;
-      }
-  
-      .closeNavbar {
-        cursor: pointer;
-        font-size: 24px;
-      }
     }
-  
-    .navBar {
-      background: var(--greyBg);
-      position: absolute;
-      height: max-content;
-      padding: 1rem;
-      width: 100%;
+
+    .toggleNavbar {
+      cursor: pointer;
+      font-size: 24px;
+      margin-left: 1rem;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .closeNavbar {
+      cursor: pointer;
+      font-size: 24px;
+      border-radius: 50%;
+      background-color: var(--PrimaryColor);
+    }
+  }
+
+  .navBar {
+    background: var(--greyBg);
+    position: fixed;
+    height: 40vh;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(209, 209, 209, 0.9);
+    transition: top 0.25s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+
+    &.active {
       top: 0;
-      left: -100%;
-      box-shadow: 0 2px 4px rgba(209, 209, 209, 0.9);
-      transition: .5s ease;
-      z-index: 1000;
+    }
+
+    .navLists {
       display: flex;
       flex-direction: column;
-  
-      &.active {
-        left: 0;
-      }
-      .navLists {
+      justify-content: center;
+      width: 100%;
+      margin: auto;
+      border: none;
+      border-radius: var(--whiteColorDream);
+
+      .navItem {
+        padding: 1rem 0;
         display: flex;
         justify-content: center;
-        width: 100%;
-        margin: auto;
-        border: none;
-        border-radius: var(--whiteColorDream);
-  
-        .navItem {
-          padding: 1rem 0;
-  
-          .navLink {
-            color: var(--textColor);
-            font-size: 0.9rem;
-            font-weight: 600;
-  
-            &:hover {
-              color: var(--PrimaryColor);
-            }
-          }
-        }
-  
-        .headerBtns {
-          flex-direction: column;
-  
-          .btn {
-            margin-top: 1rem;
-  
-            a {
-              font-weight: 600;
-  
-              &:hover {
-                color: var(--whiteColor);
-              }
-            }
-          }
-  
-          .loginBtn {
-            background: none;
-            border: 1px solid var(--PrimaryColor);
-  
-            a {
-              color: var(--PrimaryColor);
-            }
-  
-            &:hover {
-              background-color: var(--HoverColor);
-              a {
-                color: var(--whiteColor);
-              }
-            }
+        text-align: center;
+
+        .navLink {
+          color: var(--textColor);
+          font-size: 0.9rem;
+          font-weight: 600;
+
+          &:hover {
+            color: var(--PrimaryColor);
           }
         }
       }
-  
-      .closeNavbar {
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
-        color: var(--PrimaryColor);
-  
-        &:hover .icon {
-          color: var(--HoverColor);
+    }
+
+    .headerBtns {
+      flex-direction: column;
+
+      .btn {
+        margin-top: 1rem;
+
+        a {
+          font-weight: 600;
+
+          &:hover {
+            color: var(--whiteColor);
+          }
+        }
+      }
+
+      .loginBtn {
+        background: none;
+        border: 1px solid var(--PrimaryColor);
+
+        a {
+          color: var(--PrimaryColor);
+        }
+
+        &:hover {
+          background-color: var(--HoverColor);
+
+          a {
+            color: var(--whiteColor);
+          }
         }
       }
     }
-  
-    .toggleNavbar:hover + .navBar {
-      left: 0;
+
+    .closeNavbar {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      color: var(--PrimaryColor);
+
+      &:hover .icon {
+        color: var(--HoverColor);
+      }
     }
   }
-  .flex{
-    color: red;
+
+  .toggleNavbar:hover + .navBar {
+    top: 0;
   }
+
+  .flex {
+    color: rgba(255, 255, 255, 1);
+  }
+}

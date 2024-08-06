@@ -14,31 +14,30 @@ const Home = () => {
                     <p className="subTitle">
                         Travel to your favourite city with respectful of the environment!
                     </p>
-                    <button className="mainbtn">
-                        <a href="#" className="mainText">Explore Now</a>
-                    </button>
                 </div>
 
                 <div className="homeCard grid">
 
                     <div className="locationDiv">
-                        <label htmlFor="location">Location</label>
+                        <label htmlFor="location">Vị trí</label>
                         <input type="text" placeholder="Nhập địa điểm muốn đến...."/>
                     </div>
 
+                    <div className="locationDiv"></div>
                     <div className="distDiv">
-                        <label htmlFor="distance">Location</label>
-                        <input type="text" placeholder="Hà Nội,..."/>
+                        <label htmlFor="distance">Khoảng cách</label>
+                        <input type="text" placeholder="Hà Nội"/>
                     </div>
 
                     <div className="priceDiv">
-                        <label htmlFor="price">Location</label>
-                        <input type="text" placeholder="800.000VND-100.000.000VND"/>
+                        <label htmlFor="price">Khoảng giá</label>
+                        <input type="text" placeholder="800.000VND-10.000.000VND"/>
                     </div>
-                    <button className="mainbtn"></button>
+                    <button className="mainBtn">
+                        <a href="#" className="mainText">Explore Now</a>
+                    </button>
+                   </div>
 
-
-                </div>
             </div>
         </section>
         

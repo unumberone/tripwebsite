@@ -31,7 +31,7 @@
 }
 .offer .secContainer .mainContent .singleOffer .destImage {
   display: flex;
-  width: 25%;
+  width: 100%;
   border-radius: 2rem;
 }
 .offer .secContainer .mainContent .singleOffer .destImage .discount {

@@ -53,19 +53,22 @@ li{
 }
 
 .btn{
-    padding: 1rem 1.5rem;
+    width: 40%;
+    padding: 1rem 2.5rem;
     background-color: var(--PrimaryColor);
     border: none;
     outline: none;
     border-radius: 3rem;
     cursor: pointer;
     background-position: center;
- 
+    white-space: nowrap;    
+    box-sizing: border-box;
 }
 
 .btn a{
     color: var(--whiteColor);
     font-weight: 500;
+    margin-left: -20px;
 }
 
 .btn:hover a{
@@ -97,5 +100,46 @@ li{
 
 input{
     font-size: 100%;
+    border: none;
+    width: 234px;
+    
+}
+
+@media screen and ( min-width: 556px ) {
+    .mainContent{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and ( min-width: 884px ) {
+    .mainContent{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and ( min-width: 1240px ) {
+    .container{
+        width: 75% !important;
+        margin: auto !important;
+    }
+
+    .section{
+        padding: 5rem 0 3rem;
+    }
+
+    .secIntro{
+        margin: 0 auto 3rem;
+    }
+
+    .secIntro .secTitle{
+        line-height: 2rem;
+        padding-bottom: 1rem;
+        font-size: 2.2rem;
+    }
+
+    .secIntro p{
+        font-size: 15px;
+        
+    }
 }
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --PrimaryColor: hsl(26, 93%, 50%);
   --HoverColor: hsl(26, 90%, 42%);
@@ -31,7 +32,8 @@
 
 .subTitle {
   color: var(--PrimaryColor);
-  color: var(var(--whiteColorDream));
+  color: var(--whiteColorDream); /* Đây là lỗi, sửa lại */
+  text-align: center;
 }
 
 .mainBtn {
@@ -44,24 +46,26 @@
 }
 
 .mainText {
-  background-color: var(--PrimaryColor);
-  border-radius: 50%;
-  justify-self: center;
-  text-align: center;
-  display: flex;
   color: var(--inputColor);
 }
 
+.homeText, .mainBtn {
+  display: flex; /* Sử dụng flexbox cho cha */
+  justify-content: center; /* Căn chỉnh ngang cho cha */
+  align-items: center; /* Căn chỉnh dọc cho cha */
+  flex-direction: column; /* Đảm bảo các phần tử con xếp chồng lên nhau */
+}
+
 .homeCard {
-  width: 27%;
+  height: 200px;
+  margin-bottom: 160px;
   justify-content: center;
   gap: 1rem;
   border-radius: 1rem;
   position: absolute;
-  bottom: 7%;
   transform: translate(-50%);
   left: 50%;
-  box-shadow: 0 1px 1px 5px rgba(178, 178, 178, 0.45);
+  box-shadow: 0 2px 4px 8px rgba(178, 178, 178, 0.45);
   background-color: var(--whiteColor);
 }
 
@@ -71,25 +75,48 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 10px;
 }
-
-.label {
-  color: var(--whiteColor);
-  border-radius: 5px;
+.locationDiv .label,
+.distDiv .label,
+.priceDiv .label {
+  font-size: 600;
+  color: var(--blackColor);
+  margin-bottom: 0.5rem; /* Khoảng cách giữa label và input */
   border: none;
-  font-size: 13px;
 }
 
 .input {
   padding: 0.5rem;
+  border: none; /* Loại bỏ khung viền */
+  background: rgba(255, 255, 255, 0.8); /* Màu nền nhẹ */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng bóng để tạo cảm giác nổi */
+  transition: background 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển đổi khi hover */
+}
+
+::-moz-placeholder {
+  background-color: rgb(158, 158, 158);
   border-radius: 5px;
-  border: 1px solid var(--greyBg);
 }
 
-.input::-moz-placeholder {
-  color: var(--greyText);
+::placeholder {
+  background-color: rgb(158, 158, 158);
+  border-radius: 5px;
 }
 
-.input::placeholder {
-  color: var(--greyText);
+@media screen and (min-width: 480px) {
+  .home .secContainer .homeCard {
+    bottom: -18px;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home .secContainer .homeCard .btn {
+    transform: translateY(1px);
+  }
+}
+@media screen and (min-width: 720px) {
+  .home .secContainer .homeCard {
+    bottom: -20%;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }/*# sourceMappingURL=home.css.map */

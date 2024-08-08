@@ -46,6 +46,10 @@
     .headerBtns {
       display: flex;
       align-items: center;
+
+      .desktopMenu {
+        display: none;
+      }
     }
 
     .toggleNavbar {
@@ -111,29 +115,12 @@
       flex-direction: column;
 
       .btn {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
 
         a {
           font-weight: 600;
 
           &:hover {
-            color: var(--whiteColor);
-          }
-        }
-      }
-
-      .loginBtn {
-        background: none;
-        border: 1px solid var(--PrimaryColor);
-
-        a {
-          color: var(--PrimaryColor);
-        }
-
-        &:hover {
-          background-color: var(--HoverColor);
-
-          a {
             color: var(--whiteColor);
           }
         }
@@ -158,5 +145,54 @@
 
   .flex {
     color: rgba(255, 255, 255, 1);
+  }
+}
+
+/* Hiển thị danh sách menu trên màn hình lớn */
+@media screen and (min-width: 769px) {
+  .navBar {
+    display: none;
+  }
+
+  .navItem {
+    display: inline-block;
+    padding: 2rem;
+    font-size: 500;
+  }
+
+  .navLink {
+    color: white;
+  }
+
+  .headerBtns {
+    .btn{
+    .loginBtn{
+      a{
+        white-space: nowrap;
+      }
+    }
+  }
+
+
+    .desktopMenu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .toggleNavbar {
+      display: none;
+    }
+  }
+}
+
+/* Ẩn danh sách menu và chỉ hiển thị toggle trên màn hình nhỏ */
+@media screen and (max-width: 768px) {
+  .navLists {
+    display: none;
+  }
+
+  .toggleNavbar {
+    display: block;
   }
 }

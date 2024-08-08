@@ -10,15 +10,15 @@ import Footer from "./Components/Footer/Footer";
 
 
 const App = () => {
-    return(
+    return (
         <>
             <Navbar></Navbar>
             <Home></Home>
             <Popular></Popular>
             <Offers></Offers>
             <About></About>
-         {/*<Blog></Blog>
-        <Footer></Footer>*/}
+            <Blog></Blog>
+            <Footer></Footer>
         </>
     )
 }

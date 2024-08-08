@@ -6,7 +6,7 @@
   --textColor: hsl(240, 1%, 48%);
   --whiteColorDream: hsl(0, 0%, 93%);
   --greyBg: hsl(0, 0%, 96%);
-  --greyText: hsl(190, 190, 190);
+  --greyText: hsl(190, 100%, 70%);
   --inputColor: hsl(330, 12%, 97%);
   --box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
 }
@@ -63,7 +63,7 @@
 .singleDestination {
   overflow: hidden;
   border-radius: 1rem;
-  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+  box-shadow: var(--box-shadow);
 }
 
 .destImage {
@@ -89,12 +89,13 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  transition: overflow 0.3s ease;
 }
-.destImage .h3 {
+.destImage .overlayInfo .h3 {
   color: var(--whiteColor);
   font-weight: 500;
 }
-.destImage p {
+.destImage .overlayInfo p {
   color: var(--whiteColor);
   opacity: 0.7;
   font-size: 13px;
@@ -109,7 +110,7 @@
   border-radius: 50%;
   color: var(--whiteColor);
   border: 1px solid transparent;
-  transition: 0.3s ease;
+  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
 }
 .destImage .icon:hover {
   background: var(--blackColor);
@@ -146,11 +147,38 @@
   font-size: 15px;
 }
 .destFooter .flex {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   align-items: flex-start;
   transform: translateY(5px);
 }
 .destFooter .flex .icon {
   color: var(--PrimaryColor);
+  font-size: 16px;
+}
+
+/* Moved hover effect for .overlayInfo to .destImage */
+.destImage:hover .overlayInfo {
+  overflow: visible;
+}
+
+@media screen and (min-width: 720px) {
+  .popular {
+    padding-top: 15rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .popular {
+    padding-top: -100rem;
+  }
+  .popular .secContainer .secHeader .textDiv .secTitle {
+    font-size: 2.2rem;
+  }
+  .popular .secContainer .secHeader .textDiv p {
+    font-size: 15px;
+  }
+  .popular .secContainer .mainContent {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem !important;
+  }
 }/*# sourceMappingURL=popular.css.map */

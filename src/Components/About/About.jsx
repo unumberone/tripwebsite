@@ -4,6 +4,7 @@ import './about.css';
 import img14 from "../../Asset/customer.png";
 import img15 from "../../Asset/mountain.png";
 import img16 from "../../Asset/climbing.png";
+import video from "../../Asset/video.mp4";
 
 const About = () => {
     return (
@@ -35,6 +36,18 @@ const About = () => {
                         </p>
                     </div>
                 </div>
+                <div className="videoCard">
+            <div className="cardContent">
+                <div className="cardText">
+                    <h2>Wonderful House Experience There!</h2>
+                    <p>The Adventure subranking is based on an equally weighted average of scores from five countries.</p>
+                </div>
+
+                <div className="cardVideo">
+                    <video src={video} autoPlay loop muted type="video/mp4"></video>
+                </div>
+            </div>
+        </div>
             </div>
         </section>
     )

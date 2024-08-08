@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --PrimaryColor: hsl(26, 93%, 50%);
   --HoverColor: hsl(26, 90%, 42%);
@@ -37,4 +38,56 @@
   font-weight: 700;
   color: var(--blackColor);
   padding: 0.5rem;
+}
+.about .videoCard {
+  margin-top: 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.73), rgba(0, 0, 0, 0.069)), url(../../Asset/map.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2rem; /* Thêm khoảng cách padding để nội dung không bị dính vào viền */
+  border-radius: 10px; /* Thêm bo tròn góc cho card */
+}
+.about .cardContent {
+  display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+  gap: 2rem;
+}
+.about .cardText {
+  flex: 1; /* Cho phép cardText chiếm toàn bộ không gian còn lại */
+}
+.about .cardText h2 {
+  color: var(--whiteColor);
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.about .cardText p {
+  color: var(--whiteColor);
+  opacity: 0.7;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.about .cardVideo {
+  border: 2px solid var(--whiteColor);
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about .cardVideo video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 720px) {
+  .about .secContainer .mainContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột đều nhau */
+    gap: 4rem; /* Khoảng cách giữa các item */
+  }
+  .videoCard {
+    gap: 4rem;
+  }
 }/*# sourceMappingURL=about.css.map */

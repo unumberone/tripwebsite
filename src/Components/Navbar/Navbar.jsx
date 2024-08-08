@@ -6,7 +6,6 @@ import { TbGridDots } from "react-icons/tb";
 const Navbar = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
 
-  // Chuyển đổi khả năng hiển thị thanh toggle
   const toggleNav = () => {
     setIsNavVisible(prevState => !prevState);
   };
@@ -38,6 +37,23 @@ const Navbar = () => {
             </h1>
           </a>
         </div>
+        <ul className="navLists desktopMenu">
+          <li className="navItem">
+            <a href="#" className="navLink">Home</a>
+          </li>
+          <li className="navItem">
+            <a href="#" className="navLink">Products</a>
+          </li>
+          <li className="navItem">
+            <a href="#" className="navLink">Resources</a>
+          </li>
+          <li className="navItem">
+            <a href="#" className="navLink">Contact</a>
+          </li>
+          <li className="navItem">
+            <a href="#" className="navLink">Blog</a>
+          </li>
+        </ul>
         <div className="headerBtns">
           <button className="btn loginBtn">
             <a href="#">Login</a>

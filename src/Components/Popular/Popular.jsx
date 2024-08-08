@@ -50,10 +50,10 @@ const Popular = () => {
         <div className="secHeader flex">
           <div className="textDiv">
             <h2 className="secTitle">
-              Popular Destination
+            Điểm Đến Phổ Biến
             </h2>
             <p>
-              From historical cities to natural specteculars, come see the best of the world!
+            Từ các thành phố lịch sử đến cảnh tượng thiên nhiên, hãy đến xem những gì tốt nhất của thế giới!
             </p>
           </div>
           <div className="iconsDiv flex">

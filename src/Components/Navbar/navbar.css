@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --PrimaryColor: hsl(26, 93%, 50%);
   --HoverColor: hsl(26, 90%, 42%);
@@ -40,6 +41,9 @@
 .navBarSection .header .headerBtns {
   display: flex;
   align-items: center;
+}
+.navBarSection .header .headerBtns .desktopMenu {
+  display: none;
 }
 .navBarSection .header .toggleNavbar {
   cursor: pointer;
@@ -96,25 +100,12 @@
   flex-direction: column;
 }
 .navBarSection .navBar .headerBtns .btn {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .navBarSection .navBar .headerBtns .btn a {
   font-weight: 600;
 }
 .navBarSection .navBar .headerBtns .btn a:hover {
-  color: var(--whiteColor);
-}
-.navBarSection .navBar .headerBtns .loginBtn {
-  background: none;
-  border: 1px solid var(--PrimaryColor);
-}
-.navBarSection .navBar .headerBtns .loginBtn a {
-  color: var(--PrimaryColor);
-}
-.navBarSection .navBar .headerBtns .loginBtn:hover {
-  background-color: var(--HoverColor);
-}
-.navBarSection .navBar .headerBtns .loginBtn:hover a {
   color: var(--whiteColor);
 }
 .navBarSection .navBar .closeNavbar {
@@ -131,4 +122,39 @@
 }
 .navBarSection .flex {
   color: rgb(255, 255, 255);
+}
+
+/* Hiển thị danh sách menu trên màn hình lớn */
+@media screen and (min-width: 769px) {
+  .navBar {
+    display: none;
+  }
+  .navItem {
+    display: inline-block;
+    padding: 2rem;
+    font-size: 500;
+  }
+  .navLink {
+    color: white;
+  }
+  .headerBtns .btn .loginBtn a {
+    white-space: nowrap;
+  }
+  .headerBtns .desktopMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .headerBtns .toggleNavbar {
+    display: none;
+  }
+}
+/* Ẩn danh sách menu và chỉ hiển thị toggle trên màn hình nhỏ */
+@media screen and (max-width: 768px) {
+  .navLists {
+    display: none;
+  }
+  .toggleNavbar {
+    display: block;
+  }
 }/*# sourceMappingURL=navbar.css.map */

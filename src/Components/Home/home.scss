@@ -88,19 +88,6 @@
   }
 }
 
-.input {
-  padding: 0.5rem;
-  border: none; /* Loại bỏ khung viền */
-  background: rgba(255, 255, 255, 0.8); /* Màu nền nhẹ */
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng bóng để tạo cảm giác nổi */
-  transition: background 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển đổi khi hover */
-}
-
-::placeholder{
-  background-color: rgb(158, 158, 158);
-  border-radius: 5px;
-}
-
 @media screen and (min-width:480px) {
   .home{
     .secContainer{

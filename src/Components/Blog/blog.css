@@ -58,4 +58,18 @@
 }
 .blog .mainContainer .singlePost .postDetails a:hover .icon {
   transform: translateX(10px);
+}
+
+@media screen and (min-width: 720px) {
+  .blog .secContainer .mainContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0.5rem;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1640px) {
+  .blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }/*# sourceMappingURL=blog.css.map */
